@@ -1,1 +1,51 @@
+.accordion {
+	margin: 50px;
+	font-family: 'Futura', sans-serif;
+}
 
+.accordion input[type=radio], .accordion input[type=checkbox] {
+	display: none;
+}
+
+.accordion ul {
+	list-style: none;
+	padding: 0;
+}
+
+.accordion .tab-content {
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height .3s ease-in-out;
+}
+
+.accordion .tab-content-inner-wrap {
+	padding: 20px;
+}
+
+.accordion input[type=radio]:checked + label + .tab-content,
+.accordion input[type=checkbox]:checked + label + .tab-content {
+	max-height: 500px;
+	overflow: scroll;
+	border: 1px solid #c70b00;
+}
+
+.accordion li label {
+	background-color: #f7853f;
+	color: white;
+	display: block;
+	text-transform: uppercase;
+	padding: 10px;
+	box-shadow: inset 0px 0px 1px rgba(255,255,255,0.7);
+	cursor: pointer;
+	transition: transform .2s ease-in-out;
+}
+
+.accordion input[type=radio]:checked + label, 
+.accordion input[type=checkbox]:checked + label {
+	background-color: #c70b00;
+}
+
+.accordion input[type=radio]:not(:checked) + label:hover, 
+.accordion input[type=checkbox]:not(:checked) + label:hover {
+	transform: scale(1.02);
+}

@@ -1,6 +1,7 @@
 .accordion {
 	margin: 50px;
 	font-family: 'Futura', sans-serif;
+	max-width: 800px;
 }
 
 .accordion input[type=radio], .accordion input[type=checkbox] {
